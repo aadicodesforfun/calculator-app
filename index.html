@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      
+      <div class="title-bar">
+        <div class="nav-bar">
+        <div class="mac-buttons no-drag">
+          <div class="mac-btn close" onclick="closeWindow()" id="close-btn"></div>
+          <div class="mac-btn minimize" onclick="minimizeWindow()" id="min-btn"></div>
+          <div class="mac-btn maximize disabled" id="max-btn"></div>
+        </div>
+      </div>
+      </div>
+
+      <div id="display">
+        <h2>0</h2>
+      </div>
+
+      <div id="buttons">
+        <div class="first-row row">
+          <button class="btn del">AC</button>
+          <button class="btn plus-minus">&plusmn;</button>
+          <button class="btn percent">%</button>
+          <button class="btn divide">/</button>
+        </div>
+        <div class="second-row row">
+          <button class="btn seven">7</button>
+          <button class="btn eight">8</button>
+          <button class="btn nine">9</button>
+          <button class="btn multiply">X</button>
+        </div>
+        <div class="third-row row">
+          <button class="btn four">4</button>
+          <button class="btn five">5</button>
+          <button class="btn six">6</button>
+          <button class="btn minus">-</button>
+        </div>
+        <div class="fourth-row row">
+          <button class="btn one">1</button>
+          <button class="btn two">2</button>
+          <button class="btn three">3</button>
+          <button class="btn plus">+</button>
+        </div>
+        <div class="fifth-row row">
+          <button class="btn zero">0</button>
+          <button class="btn dot">.</button>
+          <button class="btn equals">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

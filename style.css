@@ -1,0 +1,328 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-app-region: drag;
+  font-family: "Poppins";
+  user-select: none;
+}
+
+.title-bar{
+  display: flex;
+  width: 100%;
+  padding-left: 25px;
+  justify-content: flex-start;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  width: 64px;
+  height: 25px;
+  border: none;
+  border-radius: 999px;
+  background-color: rgba(100, 100, 100, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  /* padding-left: 25px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.mac-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: start;
+  -webkit-app-region: no-drag;
+}
+
+.mac-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.mac-btn:hover {
+  transform: scale(1.1);
+}
+
+.mac-btn.close {
+  background-color: #ff5f57;
+}
+
+.mac-btn.minimize {
+  background-color: #ffbd2e;
+}
+
+.mac-btn.maximize {
+  background-color: rgb(166, 166, 166);
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/Poppins-Medium.ttf);
+}
+
+#app {
+  width: 280px;
+  height: 480px;
+  border-radius: 30px;
+  background-image: url("assets/background.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#display {
+  height: 60px;
+  width: 230px;
+  background-color: #fdccd5;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-app-region: no-drag;
+  box-shadow: -5px 5px 10px rgba(80, 80, 80, 0.4);
+}
+
+#display:hover{
+  cursor: text;
+}
+
+#buttons {
+  height: 315px;
+  width: 250px;
+  background-color: rgba(153, 120, 125, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.first-row .btn {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.first-row .btn:active{
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  background-color: #f0f0f0; /* Slight press tint */
+}
+
+.second-row .btn {
+  background-color: #ffedf0;
+  font-weight: bold;
+}
+
+.second-row .btn:active{
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+  background-color: #ffd1db; 
+  box-shadow:
+    0 2px 4px rgba(255, 150, 160, 0.3),
+    inset 0 2px 4px rgba(255, 150, 160, 0.3);
+}
+
+.third-row .btn {
+  background-color: #ffd8df;
+  font-weight: bold;
+}
+
+.third-row .btn:active{
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+  background-color: #f5b7c2; 
+  box-shadow:
+    0 2px 4px rgba(255, 115, 145, 0.3),
+    inset 0 2px 4px rgba(255, 128, 167, 0.3)
+}
+
+.fourth-row .btn {
+  background-color: #ffbfca;
+  font-weight: bold;
+}
+
+.fourth-row .btn:active{
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+  background-color: #f29fb3; /* deeper tint for press */
+  box-shadow:
+    0 2px 4px rgba(255, 105, 135, 0.3),
+    inset 0 2px 4px rgba(255, 128, 167, 0.3);
+}
+
+.fifth-row .btn {
+  background-color: #ffa4b4;
+  font-weight: bold;
+}
+
+.fifth-row .btn:active{
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+  background-color: #f87f9a; /* deeper pink tint */
+  box-shadow:
+    0 2px 4px rgba(255, 64, 129, 0.3),
+    inset 0 2px 4px rgba(255, 128, 167, 0.3);
+}
+
+.btn {
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 999px;
+  box-shadow: -5px 5px 15px rgba(30, 30, 30, 0.3);
+  -webkit-app-region: no-drag;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+/* .btn:active {
+  transform: scale(0.93);
+  transition: transform 0.05s ease;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.25);
+} */
+
+h2 {
+  color: #ae5766;
+  font-size: 55px;
+  user-select: text;
+}
+
+.del {
+  font-size: large;
+  color: #ffa4b4;
+}
+
+.plus-minus {
+  font-size: x-large;
+  color: #ffa4b4;
+}
+
+.percent {
+  font-size: x-large;
+  color: #ffa4b4;
+}
+
+.divide {
+  font-size: x-large;
+  color: #ae5766;
+}
+
+.seven {
+  font-size: x-large;
+  color: #ffa4b4;
+}
+
+.eight {
+  font-size: x-large;
+  color: #ffa4b4;
+}
+
+.nine {
+  font-size: x-large;
+  color: #ffa4b4;
+}
+
+.multiply {
+  color: #ae5766;
+  font-size: large;
+}
+
+.four {
+  color: #ffa4b4;
+  font-size: x-large;
+}
+
+.five {
+  color: #ffa4b4;
+  font-size: x-large;
+}
+
+.six {
+  color: #ffa4b4;
+  font-size: x-large;
+}
+
+.minus {
+  color: #ae5766;
+  font-size: xx-large;
+}
+
+.one {
+  color: white;
+  font-size: x-large;
+}
+
+.two {
+  color: white;
+  font-size: x-large;
+}
+
+.three {
+  color: white;
+  font-size: x-large;
+}
+
+.plus {
+  color: #ae5766;
+  font-size: x-large;
+}
+
+.zero {
+  color: white;
+  font-size: x-large;
+  width: 107px;
+}
+
+.dot {
+  color: white;
+  font-size: xx-large;
+}
+
+.equals {
+  color: white;
+  font-size: x-large;
+}

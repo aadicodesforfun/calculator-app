@@ -1,0 +1,45 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A cute, glassy, pink calculator built with Electron.",
+  "main": "main.js",
+  "author": "Aditya Tripathi",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^37.1.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "compression": "maximum",
+    "appId": "com.adityatripathi.calculator",
+    "productName": "Calculator",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "**/*",
+      "assets/**/*"
+    ],
+    "mac": {
+      "icon": "assets/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
